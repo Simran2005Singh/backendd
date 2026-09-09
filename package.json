@@ -1,0 +1,26 @@
+{
+  "name": "backendd",
+  "version": "1.0.0",
+  "description": "Simple",
+  "type": "module",
+  "keywords": [
+    "backend"
+  ],
+  "homepage": "https://github.com/Simran2005Singh/backendd#readme",
+  "bugs": {
+    "url": "https://github.com/Simran2005Singh/backendd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simran2005Singh/backendd.git"
+  },
+  "license": "ISC",
+  "author": "Simran Singh",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo \"Error: nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
