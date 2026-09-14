@@ -1,13 +1,14 @@
 //this is promise method 
 
-const asynchandler=(reqhandler)=>{
+const shashwat=(reqHandler)=>{
     return async(req,res,next)=>{
-        promise.resolve(reqhandler(req,res,next)).
-        catch((err)=>next(err))
+        Promise
+        .resolve(reqHandler(req,res,next))
+        .catch((err)=>next(err))
     }
 }
 
-export {asynchandler}
+export {shashwat}
 
 
 
