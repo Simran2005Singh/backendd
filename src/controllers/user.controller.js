@@ -1,6 +1,6 @@
-import {shashwat} from "../utils/asyncHandler.js";
+import {asynchandler} from "../utils/asyncHandler.js";
 
- const registeruser = shashwat(async (req,res) =>{
+ const registeruser = asynchandler(async (req,res) =>{
    res.status(200).json({
     messsage:"register user"
    })
