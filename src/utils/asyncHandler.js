@@ -1,6 +1,5 @@
 //this is promise method 
-
-const shashwat=(reqHandler)=>{
+const asynchandler=(reqHandler)=>{
     return async(req,res,next)=>{
         Promise
         .resolve(reqHandler(req,res,next))
@@ -8,7 +7,7 @@ const shashwat=(reqHandler)=>{
     }
 }
 
-export {shashwat}
+export {asynchandler}
 
 
 

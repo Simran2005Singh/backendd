@@ -15,11 +15,10 @@ app.use(cookieParser());
 //here the control is shifted to the user routes file where we have defined the route for register user
 //also the url will be like https://localhost:3000/users/registers
 
-import userroutes from './routes/user.routes.js';
-app.use("api/v1/users",userroutes)
+import router from './routes/user.routes.js';
+app.use("api/v1/users",router)
 
-
-
+app.post('/api/v1/users/register', registeruser);
 
 export {app};
  
