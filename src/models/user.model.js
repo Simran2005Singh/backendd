@@ -1,4 +1,4 @@
-import mongoose ,{Schemma}from "mongoose";
+import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 const userschemma=new mongoose.Schema({
@@ -32,7 +32,7 @@ const userschemma=new mongoose.Schema({
         type:String
     },
     watchhistory:[{
-        type:mongoose.Schemma.Types.ObjectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:"video"
     }
     ],
@@ -71,7 +71,7 @@ userschemma.methods.getaccesstoken = function(){
 }
 )
 }
-userchemma.methods.getrefreshtoken = function(){
+userschemma.methods.getrefreshtoken = function(){
      return jwt.sign({
         _id:this.id,
         email:this.email,
@@ -88,4 +88,4 @@ userchemma.methods.getrefreshtoken = function(){
 }
 
 //jwt is a bearer token 
-export const usermodel =mongoose.model("user",userschemma)
+export const user =mongoose.model("user",userschemma)

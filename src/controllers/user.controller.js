@@ -1,8 +1,8 @@
 import {asynchandler} from "../utils/asyncHandler.js";
 import apierror from "../utils/Apierror.js";
-import {user} from "..models/user.model.js";
-import {apiresponse} from "..utils/apiresponse.js";
-import {uploadOnCloudinary} from "../utils/cloudinary"
+import {user} from "../models/user.model.js";
+import {apiresponse} from "../utils/apiresponse.js";
+import {uploadOnCloudinary} from "../utils/cloudinary.js"
  const registeruser = asynchandler(async (req,res) =>{
    res.status(200).json({
     messsage:"register user"
