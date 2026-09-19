@@ -34,18 +34,16 @@ const existed = await user.findOne(
 //this is localpath as the files are not uploaded in cloudinary 
 const localpath = req.files?.avatar?.[0]?.path;
 const coverimagelocalpath =req.files?.coverimage?.[0]?.path;
-console.log("AVATAR PATH:", localpath);
 if(!localpath){
   throw new apierror(400, "Avatar is required")
 }
 
 
 const avatar = await uploadOnCloudinary(localpath)
-
-console.log("CLOUDINARY RESPONSE:", avatar);
 const coverimage = coverimagelocalpath
 ? await uploadOnCloudinary(coverimagelocalpath)
 : null;
+
 if(!avatar){
   throw new apierror(400,"Avatar is required")
 }
